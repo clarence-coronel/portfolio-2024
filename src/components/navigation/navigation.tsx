@@ -286,7 +286,6 @@ const Navigation = () => {
                 }}
               >
                 <iconLink.Icon
-                  size={30}
                   className="text-foreground cursor-pointer"
                   innerColor="var(--background)"
                   outerColor="var(--foreground)"

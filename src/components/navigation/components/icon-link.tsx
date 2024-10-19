@@ -18,7 +18,7 @@ const IconLink = forwardRef<HTMLDivElement, IconLinkProps>(
           {children}
 
           {scrolled ? (
-            <span className="truncate font-semibold pointer-events-none text-sm select-none group-hover:opacity-100 group-hover:left-[110%] opacity-0 absolute bg-foreground text-background rounded-full px-2 py-1 top-1/2 -translate-y-1/2 -left-[100%] duration-300">
+            <span className="truncate font-semibold pointer-events-none text-sm select-none group-hover:opacity-100 group-hover:left-[110%] opacity-0 absolute bg-foreground text-background rounded-full px-2 py-1 top-1/2 -translate-y-[50%] -left-[100%] duration-300">
               {title}
             </span>
           ) : (
@@ -34,7 +34,7 @@ const IconLink = forwardRef<HTMLDivElement, IconLinkProps>(
         {children}
 
         {scrolled ? (
-          <span className="truncate font-semibold pointer-events-none text-sm select-none group-hover:opacity-100 group-hover:right-[110%] opacity-0 absolute bg-foreground text-background rounded-full px-2 py-1 top-1/2 -translate-y-1/2 -right-[100%] duration-300">
+          <span className="truncate font-semibold pointer-events-none text-sm select-none group-hover:opacity-100 group-hover:right-[110%] opacity-0 absolute bg-foreground text-background rounded-full px-2 py-1 top-1/2 -translate-y-[60%] -right-[100%] duration-300">
             {title}
           </span>
         ) : (
