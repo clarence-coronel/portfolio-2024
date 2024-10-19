@@ -1,14 +1,13 @@
+"use client";
+import EmailIcon from "@/components/icons/email-icon";
+import FileIcon from "@/components/icons/file-icon";
+import GitIcon from "@/components/icons/git-icon";
+import LinkedinIcon from "@/components/icons/linkedin-icon";
+
 export default function Home() {
   return (
-    <div className="flex w-screen h-screen bg-white justify-center items-center gap-5">
-      <div className="w-40 h-40 bg-background text-foreground">
-        Light Mode
-        <div className="w-full h-5 bg-primary text-secondary">test</div>
-      </div>
-      <div className="dark w-40 h-40 bg-background text-foreground">
-        Dark Mode
-        <div className="w-full h-5 bg-primary text-secondary">test</div>
-      </div>
+    <div className="flex w-full pr-3 scrollbar-thin justify-center items-center gap-5 h-[400vh]">
+      test
     </div>
   );
 }
