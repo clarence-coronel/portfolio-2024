@@ -10,6 +10,10 @@ const ThemeBtn = () => {
     const localTheme = localStorage.getItem("theme") as "light" | "dark" | null;
     const initialTheme = localTheme || "light";
     setTheme(initialTheme);
+
+    // Apply theme here to make sure it gets called in client side. But causes a 1sec delay
+    // when loading theme
+    applyTheme(initialTheme);
   }, []);
 
   const toggleTheme = () => {
@@ -32,11 +36,11 @@ const ThemeBtn = () => {
   }, [theme]);
 
   // Apply theme before loading component
-  applyTheme(
-    localStorage.getItem("theme")
-      ? (localStorage.getItem("theme") as "dark" | "light")
-      : "light"
-  );
+  // applyTheme(
+  //   localStorage.getItem("theme")
+  //     ? (localStorage.getItem("theme") as "dark" | "light")
+  //     : "light"
+  // );
 
   return (
     <button className="z-10 relative" onClick={toggleTheme}>
