@@ -280,6 +280,7 @@ const Navigation = () => {
               <IconLink
                 key={index}
                 title={iconLink.title}
+                mobileOrientation="right"
                 ref={(el: HTMLDivElement | null) => {
                   iconRefs.current[index] = el;
                 }}
@@ -295,7 +296,7 @@ const Navigation = () => {
           </div>
 
           <div className="mt-auto">
-            <IconLink title="Toggle Theme">
+            <IconLink mobileOrientation="left" title="Toggle Theme">
               <ThemeBtn />
             </IconLink>
           </div>
