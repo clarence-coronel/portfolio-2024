@@ -247,11 +247,11 @@ const Navigation = () => {
             </h2>
             <h1 className="tracking-tighter max-md:text-3xl max-xl:text-5xl font-bold text-7xl max-w-[900px] text-balance text-center">
               {`<Full-stack Developer `}
+              <HighlightText>experience=&quot;Junior&quot;</HighlightText>{" "}
               <HighlightText>
                 passionate={`{`}true{`}`}
               </HighlightText>{" "}
-              <HighlightText>experience=&quot;Junior&quot;</HighlightText>
-              {"/>"}
+              {" />"}
             </h1>
           </div>
 
