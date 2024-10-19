@@ -9,15 +9,13 @@ import EmailIcon from "../icons/email-icon";
 import HighlightText from "../ui/highlight-text";
 import NavLink from "./components/nav-link";
 import IconLink from "./components/icon-link";
+import LightModeIcon from "../icons/light-mode-icon";
+import DarkModeIcon from "../icons/dark-mode-icon";
 
 import useScroll from "@/hooks/useScroll";
 import useWindowSize from "@/hooks/useWindowSize";
 import { animate } from "popmotion";
-
-interface Link {
-  path: string;
-  title: string;
-}
+import ThemeBtn from "./components/theme-btn";
 
 const links = [
   {
@@ -51,7 +49,6 @@ const Navigation = () => {
   const navRef = useRef<HTMLElement | null>(null);
   const iconsContainerRef = useRef<HTMLDivElement | null>(null);
 
-  // Create an array of refs for each NavLink
   const navLinkRefs = useRef<(HTMLAnchorElement | null)[]>([]);
   const iconRefs = useRef<(HTMLAnchorElement | null)[]>([]);
 
@@ -251,23 +248,32 @@ const Navigation = () => {
           <LogoIcon innerColor="var(--primary)" type="bg1" />
         </div>
 
-        <div
-          ref={iconsContainerRef}
-          className={`w-fit mr-auto flex gap-14 z-50`}
-        >
-          {iconLinks.map((iconLink, index) => (
-            <IconLink
-              key={index}
-              title={iconLink.title}
-              ref={(el) => (iconRefs.current[index] = el)} // Assign the ref to each IconLink
-            >
-              <iconLink.Icon
-                size={30}
-                className="text-foreground cursor-pointer"
-                innerColor="var(--background)"
-              />
+        <div className="w-full flex justify-between">
+          <div
+            ref={iconsContainerRef}
+            className={`w-fit mr-auto flex gap-14 z-50 `}
+          >
+            {iconLinks.map((iconLink, index) => (
+              <IconLink
+                key={index}
+                title={iconLink.title}
+                ref={(el) => (iconRefs.current[index] = el)} // Assign the ref to each IconLink
+              >
+                <iconLink.Icon
+                  size={30}
+                  className="text-foreground cursor-pointer"
+                  innerColor="var(--background)"
+                  outerColor="var(--foreground)"
+                />
+              </IconLink>
+            ))}
+          </div>
+
+          <div className="mt-auto">
+            <IconLink title="Toggle Theme">
+              <ThemeBtn />
             </IconLink>
-          ))}
+          </div>
         </div>
       </div>
     </header>
