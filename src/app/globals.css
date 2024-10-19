@@ -20,7 +20,7 @@
   }
 
   body {
-    @apply font-inter text-foreground;
+    @apply font-inter text-foreground duration-200;
     background-color: var(--background);
   }
 
