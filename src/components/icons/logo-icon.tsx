@@ -1,7 +1,7 @@
 import React from "react";
 import { IconProps } from "@/interfaces/interfaces";
 
-interface LogoIconProps extends IconProps {
+interface LogoIconProps extends Omit<IconProps, "outerColor"> {
   type?: "bg1" | "bg2" | "reg";
 }
 

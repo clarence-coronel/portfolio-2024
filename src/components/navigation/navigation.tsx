@@ -83,9 +83,11 @@ const Navigation = () => {
         const deltaX = pos.x - finalPosTemp[index].x;
         const deltaY = pos.y - finalPosTemp[index].y;
 
-        navLinkRefs.current[
-          index
-        ].style.transform = `translate(${deltaX}px, ${deltaY}px)`;
+        if (navLinkRefs.current[index]) {
+          navLinkRefs.current[
+            index
+          ].style.transform = `translate(${deltaX}px, ${deltaY}px)`;
+        }
 
         // animate back to the final position
         animate({
@@ -93,9 +95,12 @@ const Navigation = () => {
           to: 0,
           duration: 1000,
           onUpdate: (progress) => {
-            navLinkRefs.current[index].style.transform = `translate(${
-              deltaX * progress
-            }px, ${deltaY * progress}px)`;
+            const navLink = navLinkRefs.current[index];
+            if (navLink) {
+              navLink.style.transform = `translate(${deltaX * progress}px, ${
+                deltaY * progress
+              }px)`;
+            }
           },
         });
       });
@@ -110,9 +115,11 @@ const Navigation = () => {
         const deltaX = pos.x - finalIconPosTemp[index].x;
         const deltaY = pos.y - finalIconPosTemp[index].y;
 
-        iconRefs.current[
-          index
-        ].style.transform = `translate(${deltaX}px, ${deltaY}px)`;
+        if (iconRefs.current[index]) {
+          iconRefs.current[
+            index
+          ].style.transform = `translate(${deltaX}px, ${deltaY}px)`;
+        }
 
         // animate back to the final position
         animate({
@@ -120,9 +127,12 @@ const Navigation = () => {
           to: 0,
           duration: 1000,
           onUpdate: (progress) => {
-            iconRefs.current[index].style.transform = `translate(${
-              deltaX * progress
-            }px, ${deltaY * progress}px)`;
+            const iconRef = iconRefs.current[index];
+            if (iconRef) {
+              iconRef.style.transform = `translate(${deltaX * progress}px, ${
+                deltaY * progress
+              }px)`;
+            }
           },
         });
       });
@@ -137,9 +147,10 @@ const Navigation = () => {
         const deltaX = pos.x - finalPosTemp[index].x;
         const deltaY = pos.y - finalPosTemp[index].y;
 
-        navLinkRefs.current[
-          index
-        ].style.transform = `translate(${deltaX}px, ${deltaY}px)`;
+        const navLink = navLinkRefs.current[index];
+        if (navLink) {
+          navLink.style.transform = `translate(${deltaX}px, ${deltaY}px)`;
+        }
 
         // animate back to the final position
         animate({
@@ -147,9 +158,12 @@ const Navigation = () => {
           to: 0,
           duration: 1000,
           onUpdate: (progress) => {
-            navLinkRefs.current[index].style.transform = `translate(${
-              deltaX * progress
-            }px, ${deltaY * progress}px)`;
+            const navLink = navLinkRefs.current[index];
+            if (navLink) {
+              navLink.style.transform = `translate(${deltaX * progress}px, ${
+                deltaY * progress
+              }px)`;
+            }
           },
         });
       });
@@ -164,9 +178,10 @@ const Navigation = () => {
         const deltaX = pos.x - finalIconPosTemp[index].x;
         const deltaY = pos.y - finalIconPosTemp[index].y;
 
-        iconRefs.current[
-          index
-        ].style.transform = `translate(${deltaX}px, ${deltaY}px)`;
+        const iconRef = iconRefs.current[index];
+        if (iconRef) {
+          iconRef.style.transform = `translate(${deltaX}px, ${deltaY}px)`;
+        }
 
         // animate back to the final position
         animate({
@@ -174,9 +189,12 @@ const Navigation = () => {
           to: 0,
           duration: 1000,
           onUpdate: (progress) => {
-            iconRefs.current[index].style.transform = `translate(${
-              deltaX * progress
-            }px, ${deltaY * progress}px)`;
+            const iconRef = iconRefs.current[index];
+            if (iconRef) {
+              iconRef.style.transform = `translate(${deltaX * progress}px, ${
+                deltaY * progress
+              }px)`;
+            }
           },
         });
       });
