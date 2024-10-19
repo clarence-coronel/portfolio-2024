@@ -3,11 +3,16 @@ import { useEffect, useState } from "react";
 const useWindowSize = () => {
   // State to hold the window size
   const [windowSize, setWindowSize] = useState({
-    width: window.innerWidth,
-    height: window.innerHeight,
+    width: null,
+    height: null,
   });
 
   useEffect(() => {
+    setWindowSize({
+      width: window.innerWidth,
+      height: window.innerHeight,
+    });
+
     // Handler to update the state with new window size
     const handleResize = () => {
       setWindowSize({
