@@ -1,8 +1,7 @@
 import React from "react";
+import { IconProps } from "@/interfaces/interfaces";
 
-interface LogoIconProps extends React.SVGProps<SVGSVGElement> {
-  size?: number;
-  innerColor: string;
+interface LogoIconProps extends IconProps {
   type?: "bg1" | "bg2" | "reg";
 }
 
