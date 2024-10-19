@@ -12,6 +12,7 @@ import IconLink from "./components/icon-link";
 import useScroll from "@/hooks/useScroll";
 import { animate } from "popmotion";
 import ThemeBtn from "./components/theme-btn";
+import ScrollIcon from "../icons/scroll-icon";
 
 const links = [
   {
@@ -237,26 +238,35 @@ const Navigation = () => {
         <div
           className={`${
             scrolled ? "landing-page-text-exit" : "landing-page-text-intro"
-          } z-10 max-lg:gap-8 max-md:gap-5 max-sm:gap-3 flex flex-col justify-center items-center gap-10 pb-28 max-md:pb-48 absolute left-1/2 top-1/2 -translate-x-[50%] -translate-y-[50%]`}
+          } z-10 pb-28 max-md:pb-48 absolute left-1/2 top-1/2 -translate-x-[50%] -translate-y-[50%] flex flex-col justify-between items-center h-screen py-[30vh]`}
         >
-          <h2 className="max-md:text-xl max-xl:text-2xl font-semibold text-3xl tracking-[0.25em] text-center">
-            <HighlightText>C</HighlightText>LARENCE{" "}
-            <HighlightText>C</HighlightText>ORONEL
-          </h2>
-          <h1 className="tracking-tighter max-md:text-3xl max-xl:text-5xl font-bold text-7xl max-w-[900px] text-balance text-center">
-            {`<Full-stack Developer `}
-            <HighlightText>
-              passionate={`{`}true{`}`}
-            </HighlightText>{" "}
-            <HighlightText>experience=&quot;Junior&quot;</HighlightText>
-            {"/>"}
-          </h1>
+          <div className="max-lg:gap-8 max-md:gap-5 max-sm:gap-3 flex flex-col justify-center items-center gap-10 ">
+            <h2 className="max-md:text-xl max-xl:text-2xl font-semibold text-3xl tracking-[0.25em] text-center">
+              <HighlightText>C</HighlightText>LARENCE{" "}
+              <HighlightText>C</HighlightText>ORONEL
+            </h2>
+            <h1 className="tracking-tighter max-md:text-3xl max-xl:text-5xl font-bold text-7xl max-w-[900px] text-balance text-center">
+              {`<Full-stack Developer `}
+              <HighlightText>
+                passionate={`{`}true{`}`}
+              </HighlightText>{" "}
+              <HighlightText>experience=&quot;Junior&quot;</HighlightText>
+              {"/>"}
+            </h1>
+          </div>
+
+          <div className="max-md:hidden">
+            <ScrollIcon size={70} innerColor="var(--foreground)" />
+          </div>
+          <div className="md:hidden">
+            <ScrollIcon size={40} innerColor="var(--foreground)" />
+          </div>
         </div>
 
         <div
           className={`${
             scrolled ? "landing-page-bg-exit" : "landing-page-bg-intro"
-          } fixed -z-1 left-0 top-0 w-screen h-screen`}
+          } fixed -z-1 left-0 top-0 max-md:hidden`}
         >
           <LogoIcon innerColor="var(--primary)" type="bg1" />
         </div>
