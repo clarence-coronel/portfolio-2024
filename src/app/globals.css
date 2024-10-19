@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -15,5 +17,98 @@
     --foreground: #fafafa;
     --primary: #171717;
     --secondary: #fc2d1f;
+  }
+
+  body {
+    @apply font-inter text-foreground;
+    background-color: var(--background);
+  }
+
+  /* For Webkit browsers (Chrome, Safari, Edge) */
+  ::-webkit-scrollbar {
+    width: 10px; /* width of the scrollbar */
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--background); /* color of the track */
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--foreground); /* color of the thumb */
+    border-radius: 10px; /* roundness of the thumb */
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: var(--secondary); /* color on hover */
+  }
+
+  /* For Firefox */
+  .scrollbar-thin {
+    scrollbar-width: thin; /* 'auto' or 'thin' */
+    scrollbar-color: var(--foreground) var(--background); /* thumb color and track color */
+  }
+
+  @keyframes landing-page-text-exit {
+    0% {
+      opacity: 100%;
+    }
+
+    100% {
+      opacity: 0%;
+    }
+  }
+
+  .landing-page-text-exit {
+    animation: landing-page-text-exit 1s forwards;
+  }
+
+  @keyframes landing-page-text-intro {
+    0% {
+      opacity: 0%;
+    }
+
+    100% {
+      opacity: 100;
+    }
+  }
+
+  .landing-page-text-intro {
+    animation: landing-page-text-intro 1s forwards;
+  }
+
+  @keyframes landing-page-bg-exit {
+    0% {
+      transform: rotate(0deg) scale(1); /* Starting point */
+      background-color: transparent;
+    }
+    25% {
+      transform: rotate(12deg) scale(0.9); /* First keyframe */
+      background-color: transparent;
+    }
+
+    100% {
+      transform: rotate(-180deg) scale(10); /* End point */
+      background-color: var(--primary);
+    }
+  }
+
+  .landing-page-bg-exit {
+    animation: landing-page-bg-exit 2s forwards; /* Smooth easing */
+  }
+
+  @keyframes landing-page-bg-intro {
+    0% {
+      transform: rotate(-180deg) scale(5); /* End point */
+      background-color: var(--primary);
+    }
+
+    100% {
+      transform: rotate(0deg) scale(1); /* Starting point */
+      background-color: transparent;
+    }
+  }
+
+  .landing-page-bg-intro {
+    animation: landing-page-bg-intro 1s forwards; /* Smooth easing */
   }
 }
