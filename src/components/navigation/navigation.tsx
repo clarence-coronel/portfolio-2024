@@ -45,7 +45,7 @@ const Navigation = () => {
   const iconsContainerRef = useRef<HTMLDivElement | null>(null);
 
   const navLinkRefs = useRef<(HTMLAnchorElement | null)[]>([]);
-  const iconRefs = useRef<(HTMLAnchorElement | null)[]>([]);
+  const iconRefs = useRef<(HTMLAnchorElement | HTMLDivElement | null)[]>([]);
 
   const getNavLinkRects = () => {
     const posArrTemp: DOMRect[] = [];
@@ -226,7 +226,9 @@ const Navigation = () => {
                 key={link.path}
                 title={link.title}
                 path={link.path}
-                ref={(el) => (navLinkRefs.current[index] = el)}
+                ref={(el) => {
+                  navLinkRefs.current[index] = el;
+                }}
               />
             ))}
           </nav>
@@ -268,7 +270,9 @@ const Navigation = () => {
               <IconLink
                 key={index}
                 title={iconLink.title}
-                ref={(el) => (iconRefs.current[index] = el)} // Assign the ref to each IconLink
+                ref={(el: HTMLDivElement | null) => {
+                  iconRefs.current[index] = el;
+                }}
               >
                 <iconLink.Icon
                   size={30}
