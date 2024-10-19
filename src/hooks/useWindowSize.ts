@@ -3,8 +3,8 @@ import { useEffect, useState } from "react";
 const useWindowSize = () => {
   // State to hold the window size
   const [windowSize, setWindowSize] = useState({
-    width: null,
-    height: null,
+    width: 0,
+    height: 0,
   });
 
   useEffect(() => {
