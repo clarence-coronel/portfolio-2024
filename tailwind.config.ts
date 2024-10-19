@@ -19,6 +19,9 @@ const config: Config = {
           gray: "#AAB0C3",
         },
       },
+      fontFamily: {
+        inter: ["Inter", "sans-serif"],
+      },
     },
   },
   plugins: [],
