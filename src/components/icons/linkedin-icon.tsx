@@ -1,12 +1,7 @@
 import React from "react";
 import { IconProps } from "@/interfaces/interfaces";
 
-const LinkedinIcon = ({
-  size = 40,
-  innerColor,
-  outerColor,
-  ...props
-}: IconProps) => {
+const LinkedinIcon = ({ size = 40, outerColor, ...props }: IconProps) => {
   return (
     <svg
       width={size}

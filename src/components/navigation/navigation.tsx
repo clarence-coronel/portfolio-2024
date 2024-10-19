@@ -1,19 +1,15 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import LogoIcon from "../icons/logo-icon";
 import Link from "next/link";
 import GitIcon from "../icons/git-icon";
 import FileIcon from "../icons/file-icon";
 import LinkedinIcon from "../icons/linkedin-icon";
-import EmailIcon from "../icons/email-icon";
 import HighlightText from "../ui/highlight-text";
 import NavLink from "./components/nav-link";
 import IconLink from "./components/icon-link";
-import LightModeIcon from "../icons/light-mode-icon";
-import DarkModeIcon from "../icons/dark-mode-icon";
 
 import useScroll from "@/hooks/useScroll";
-import useWindowSize from "@/hooks/useWindowSize";
 import { animate } from "popmotion";
 import ThemeBtn from "./components/theme-btn";
 
@@ -44,7 +40,6 @@ const iconLinks = [
 
 const Navigation = () => {
   const scrolled = useScroll();
-  const windowSize = useWindowSize();
 
   const navRef = useRef<HTMLElement | null>(null);
   const iconsContainerRef = useRef<HTMLDivElement | null>(null);
@@ -53,10 +48,10 @@ const Navigation = () => {
   const iconRefs = useRef<(HTMLAnchorElement | null)[]>([]);
 
   const getNavLinkRects = () => {
-    const posArrTemp: any[] = [];
-    navLinkRefs.current.forEach((linkRef, index) => {
+    const posArrTemp: DOMRect[] = [];
+    navLinkRefs.current.forEach((linkRef) => {
       if (linkRef) {
-        const rect = linkRef.getBoundingClientRect();
+        const rect: DOMRect = linkRef.getBoundingClientRect();
         posArrTemp.push(rect);
       }
     });
@@ -65,10 +60,10 @@ const Navigation = () => {
   };
 
   const getIconLinkRects = () => {
-    const posArrTemp: any[] = [];
-    iconRefs.current.forEach((linkRef, index) => {
+    const posArrTemp: DOMRect[] = [];
+    iconRefs.current.forEach((linkRef) => {
       if (linkRef) {
-        const rect = linkRef.getBoundingClientRect();
+        const rect: DOMRect = linkRef.getBoundingClientRect();
         posArrTemp.push(rect);
       }
     });
@@ -83,8 +78,6 @@ const Navigation = () => {
       navRef.current?.classList.add("flex-col");
 
       const finalPosTemp = getNavLinkRects();
-
-      const tempFinalPosWindow = { ...windowSize };
 
       initialPosTemp?.forEach((pos, index) => {
         const deltaX = pos.x - finalPosTemp[index].x;
@@ -233,10 +226,10 @@ const Navigation = () => {
           <h1 className="tracking-tighter max-md:text-3xl max-xl:text-5xl font-bold text-7xl max-w-[900px] text-balance text-center">
             {`<Full-stack Developer `}
             <HighlightText>
-              passionate={"{"}true{"}"}
+              passionate={`{`}true{`}`}
             </HighlightText>{" "}
-            <HighlightText>experience="Junior"</HighlightText>
-            {`/>`}
+            <HighlightText>experience=&quot;Junior&quot;</HighlightText>
+            {"/>"}
           </h1>
         </div>
 
