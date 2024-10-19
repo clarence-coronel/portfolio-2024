@@ -35,8 +35,8 @@ const FileIcon = ({
         className="duration-200"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M16 32C24.8366 32 32 24.8366 32 16C32 7.16344 24.8366 0 16 0C7.16344 0 0 7.16344 0 16C0 24.8366 7.16344 32 16 32ZM10 6H18L24 12V24C24 25.11 23.11 26 22 26H10C8.89 26 8 25.11 8 24V8C8 6.89 8.89 6 10 6Z"
         fill="currentColor"
         className="duration-200"
