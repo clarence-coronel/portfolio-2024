@@ -106,7 +106,7 @@ const Footer = () => {
     <div className="max-w-[1900px] mx-auto h-20 w-full flex justify-between">
       <div
         ref={iconsContainerRef}
-        className={`max-md:flex-col w-fit mr-auto flex gap-14 fixed left-0 bottom-0 z-50 max-lg:px-16 max-md:px-5 max-md:py-5 px-28 py-10`}
+        className={`max-md:hidden w-fit mr-auto flex gap-14 fixed left-0 bottom-0 z-50 px-20 max-xl:px-8 max-md:py-5 py-10 max-lg:py-5`}
       >
         {iconLinks.map((iconLink, index) => (
           <IconLink
@@ -134,7 +134,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="max-md:hidden mt-auto fixed z-50 bottom-0 right-0 max-lg:px-16 max-md:px-5 max-md:py-5 px-28 py-10">
+      <div className="max-md:hidden mt-auto fixed z-50 bottom-0 right-0 px-20 max-xl:px-5 max-md:py-5 py-10">
         <IconLink orientation="right" title="Toggle Theme">
           <div className="flex">
             <ThemeBtn />

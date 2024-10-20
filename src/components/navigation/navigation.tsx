@@ -7,6 +7,7 @@ import NavLink from "./components/nav-link";
 
 import useScroll from "@/hooks/useScroll";
 import { animate } from "popmotion";
+import MobileNav from "./components/mobile-nav";
 
 const links = [
   {
@@ -127,11 +128,11 @@ const Navigation = () => {
   return (
     <header
       className={`${
-        !scrolled && "z-50"
-      } max-lg:px-16 max-md:px-5 max-md:py-5 px-28 py-10 fixed w-screen h-screen flex flex-col justify-between items-center`}
+        scrolled && "max-md:bg-primary "
+      } px-20 max-xl:px-8 z-50 max-lg:py-5 max-md:py-3 py-10 fixed w-screen flex flex-col justify-between items-center`}
     >
-      <div className="max-w-[1900px] w-full flex flex-col justify-between h-full">
-        <div className=" w-full flex justify-between items-start">
+      <div className="max-w-[1900px] w-full flex flex-col justify-between h-full max-md:items-center">
+        <div className=" w-full flex justify-between items-start max-md:items-center">
           <Link href="/" className="hover:rotate-180 duration-500 ">
             <LogoIcon
               className="max-md:hidden"
@@ -140,7 +141,7 @@ const Navigation = () => {
             />
             <LogoIcon
               className="md:hidden"
-              size={50}
+              size={40}
               innerColor="var(--secondary)"
             />
           </Link>
@@ -160,39 +161,9 @@ const Navigation = () => {
               />
             ))}
           </nav>
+
+          <MobileNav />
         </div>
-
-        {/* <div className="w-full flex justify-between">
-          <div
-            ref={iconsContainerRef}
-            className={`max-sm:flex-col w-fit mr-auto flex gap-14 z-50 `}
-          >
-            {iconLinks.map((iconLink, index) => (
-              <IconLink
-                key={index}
-                title={iconLink.title}
-                orientation="left"
-                ref={(el: HTMLDivElement | null) => {
-                  iconRefs.current[index] = el;
-                }}
-              >
-                <iconLink.Icon
-                  className="text-foreground cursor-pointer"
-                  innerColor="var(--background)"
-                  outerColor="var(--foreground)"
-                />
-              </IconLink>
-            ))}
-          </div>
-
-          <div className="mt-auto">
-            <IconLink orientation="right" title="Toggle Theme">
-              <div className="flex">
-                <ThemeBtn />
-              </div>
-            </IconLink>
-          </div>
-        </div> */}
       </div>
     </header>
   );

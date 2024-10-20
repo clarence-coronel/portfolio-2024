@@ -48,7 +48,7 @@ export default function Home() {
       <div
         className={`${
           scrolled && "opacity-100"
-        } duration-500 opacity-0 z-40 relative max-sm:px-5 px-10`}
+        } duration-1000 opacity-0 z-40 relative max-sm:px-5 max-md:px-16 px-40`}
       >
         <div>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel, quasi

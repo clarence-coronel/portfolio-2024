@@ -21,8 +21,8 @@ const NavLink = forwardRef<HTMLAnchorElement, { path: string; title: string }>(
         className="h-5 group text-foreground font-bold overflow-clip"
         href={path}
       >
-        <span className="group-hover:-translate-y-[100%] group-hover:opacity-0 opacity-100 block  duration-300">{`<${title}>`}</span>
-        <span className="group-hover:-translate-y-[100%] group-hover:opacity-100 opacity-0 block translate-y-[100%]  duration-300">{`<${title}/>`}</span>
+        <span className="md:group-hover:-translate-y-[100%] md:group-hover:opacity-0 opacity-100 block  duration-300">{`<${title}>`}</span>
+        <span className="md:group-hover:-translate-y-[100%] md:group-hover:opacity-100 opacity-0 block translate-y-[100%]  duration-300">{`<${title}/>`}</span>
       </Link>
     );
   }
