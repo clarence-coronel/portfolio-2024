@@ -2,6 +2,7 @@
 import React, { useEffect, useLayoutEffect, useState } from "react";
 import LightModeIcon from "@/components/icons/light-mode-icon";
 import DarkModeIcon from "@/components/icons/dark-mode-icon";
+import IconLink from "@/components/navigation/components/icon-link";
 
 const ThemeBtn = () => {
   const [theme, setTheme] = useState<"light" | "dark">("light");
@@ -45,15 +46,19 @@ const ThemeBtn = () => {
   return (
     <button className="relative" onClick={toggleTheme}>
       {theme === "dark" ? (
-        <LightModeIcon
-          innerColor="var(--background)"
-          outerColor="var(--foreground)"
-        />
+        <IconLink orientation="left" title="Light">
+          <LightModeIcon
+            innerColor="var(--background)"
+            outerColor="var(--foreground)"
+          />
+        </IconLink>
       ) : (
-        <DarkModeIcon
-          innerColor="var(--background)"
-          outerColor="var(--foreground)"
-        />
+        <IconLink orientation="left" title="Dark">
+          <DarkModeIcon
+            innerColor="var(--background)"
+            outerColor="var(--foreground)"
+          />
+        </IconLink>
       )}
     </button>
   );

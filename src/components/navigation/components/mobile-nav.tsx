@@ -4,7 +4,7 @@ import NavLink from "./nav-link";
 import LogoIcon from "@/components/icons/logo-icon";
 import CloseIcon from "@/components/icons/close-icon";
 
-import ThemeBtn from "./theme-btn";
+import ThemeBtn from "../../footer/components/theme-btn";
 import GitIcon from "@/components/icons/git-icon";
 import FileIcon from "@/components/icons/file-icon";
 import LinkedinIcon from "@/components/icons/linkedin-icon";

@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useRef } from "react";
 import IconLink from "../navigation/components/icon-link";
-import ThemeBtn from "../navigation/components/theme-btn";
+import ThemeBtn from "./components/theme-btn";
 import { animate } from "popmotion";
 
 import GitIcon from "../icons/git-icon";
@@ -126,20 +126,16 @@ const Footer = () => {
         ))}
 
         <div className="md:hidden">
-          <IconLink orientation="left" title="Toggle Theme">
-            <div className="flex">
-              <ThemeBtn />
-            </div>
-          </IconLink>
+          <div className="flex">
+            <ThemeBtn />
+          </div>
         </div>
       </div>
 
       <div className="max-md:hidden mt-auto fixed z-50 bottom-0 right-0 px-20 max-xl:px-5 max-md:py-5 py-10">
-        <IconLink orientation="right" title="Toggle Theme">
-          <div className="flex">
-            <ThemeBtn />
-          </div>
-        </IconLink>
+        <div className="flex">
+          <ThemeBtn />
+        </div>
       </div>
     </div>
   );
