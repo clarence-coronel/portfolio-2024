@@ -44,16 +44,16 @@ const ThemeBtn = () => {
   // );
 
   return (
-    <button className="relative" onClick={toggleTheme}>
+    <button className="relative mt-auto" onClick={toggleTheme}>
       {theme === "dark" ? (
-        <IconLink orientation="left" title="Light">
+        <IconLink orientation="right" title="Light">
           <LightModeIcon
             innerColor="var(--background)"
             outerColor="var(--foreground)"
           />
         </IconLink>
       ) : (
-        <IconLink orientation="left" title="Dark">
+        <IconLink orientation="right" title="Dark">
           <DarkModeIcon
             innerColor="var(--background)"
             outerColor="var(--foreground)"

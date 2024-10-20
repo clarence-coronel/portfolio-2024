@@ -9,11 +9,16 @@ import FileIcon from "../icons/file-icon";
 import LinkedinIcon from "../icons/linkedin-icon";
 
 import useScroll from "@/hooks/useScroll";
+import { githubProfile, linkedinProfile } from "@/data/socials";
 
 const iconLinks = [
-  { title: "Github", Icon: GitIcon },
-  { title: "Resume", Icon: FileIcon },
-  { title: "Linkedin", Icon: LinkedinIcon },
+  { title: "Github", Icon: GitIcon, url: githubProfile },
+  { title: "Resume", Icon: FileIcon, url: "/Resume v6_remove_contacts .pdf" },
+  {
+    title: "Linkedin",
+    Icon: LinkedinIcon,
+    url: linkedinProfile,
+  },
 ];
 
 const Footer = () => {
@@ -109,20 +114,21 @@ const Footer = () => {
         className={`max-md:hidden w-fit mr-auto flex gap-14 fixed left-0 bottom-0 z-50 px-20 max-xl:px-8 max-md:py-5 py-10 max-lg:py-5`}
       >
         {iconLinks.map((iconLink, index) => (
-          <IconLink
-            key={index}
-            title={iconLink.title}
-            orientation="left"
-            ref={(el: HTMLDivElement | null) => {
-              iconRefs.current[index] = el;
-            }}
-          >
-            <iconLink.Icon
-              className="text-foreground cursor-pointer"
-              innerColor="var(--background)"
-              outerColor="var(--foreground)"
-            />
-          </IconLink>
+          <a key={index} href={iconLink.url} target="_blank">
+            <IconLink
+              title={iconLink.title}
+              orientation="left"
+              ref={(el: HTMLDivElement | null) => {
+                iconRefs.current[index] = el;
+              }}
+            >
+              <iconLink.Icon
+                className="text-foreground cursor-pointer"
+                innerColor="var(--background)"
+                outerColor="var(--foreground)"
+              />
+            </IconLink>
+          </a>
         ))}
 
         <div className="md:hidden">
@@ -132,8 +138,8 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="max-md:hidden mt-auto fixed z-50 bottom-0 right-0 px-20 max-xl:px-5 max-md:py-5 py-10">
-        <div className="flex">
+      <div className="max-md:hidden mt-auto fixed z-50 bottom-0 right-0 px-20 max-xl:px-8 max-md:py-5 py-10 max-lg:py-5">
+        <div className="flex items-end">
           <ThemeBtn />
         </div>
       </div>
