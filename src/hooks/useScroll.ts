@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const useScroll = (threshold = 500) => {
+const useScroll = (threshold = 200) => {
   const [hasScrolled, setHasScrolled] = useState(false);
 
   useEffect(() => {
