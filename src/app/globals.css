@@ -86,14 +86,33 @@
       background-color: transparent;
     }
 
+    99% {
+      opacity: 100%;
+    }
+
     100% {
       transform: rotate(-180deg) scale(15); /* End point */
       background-color: var(--primary);
+      opacity: 0;
+      display: none;
     }
   }
 
   .landing-page-bg-exit {
     animation: landing-page-bg-exit 2s forwards; /* Smooth easing */
+  }
+
+  @keyframes body-bg {
+    0% {
+      @apply bg-background;
+    }
+    100% {
+      @apply bg-primary;
+    }
+  }
+
+  body:has(.landing-page-bg-exit) {
+    animation: body-bg 2s forwards;
   }
 
   @keyframes landing-page-bg-intro {
