@@ -24,6 +24,18 @@
     background-color: var(--background);
   }
 
+  ::selection {
+    background-color: var(--foreground); /* Highlight background color */
+    color: var(--background); /* Highlighted text color */
+  }
+
+  ::-moz-selection {
+    /* For Firefox */
+    background-color: var(--foreground); /* Highlight background color */
+    color: var(--background); /* Highlighted text color */
+  }
+  In this exa
+
   /* For Webkit browsers (Chrome, Safari, Edge) */
   ::-webkit-scrollbar {
     width: 10px; /* width of the scrollbar */
