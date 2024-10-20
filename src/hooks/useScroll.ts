@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const useScroll = (threshold = 100) => {
+const useScroll = (threshold = 500) => {
   const [hasScrolled, setHasScrolled] = useState(false);
 
   useEffect(() => {
@@ -14,6 +14,8 @@ const useScroll = (threshold = 100) => {
           setHasScrolled(false); // Optionally reset on scroll back up
         }
       };
+
+      handleScroll();
 
       // Add the scroll event listener
       window.addEventListener("scroll", handleScroll);

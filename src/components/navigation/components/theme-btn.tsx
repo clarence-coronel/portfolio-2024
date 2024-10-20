@@ -43,7 +43,7 @@ const ThemeBtn = () => {
   // );
 
   return (
-    <button className="z-10 relative" onClick={toggleTheme}>
+    <button className="relative" onClick={toggleTheme}>
       {theme === "dark" ? (
         <LightModeIcon
           innerColor="var(--background)"
