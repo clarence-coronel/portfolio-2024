@@ -184,4 +184,9 @@
   .mobile-nav-exit {
     animation: mobile-nav-exit 0.5s forwards;
   }
+
+  .timeline::before {
+    @apply max-lg:left-0 absolute w-0.5 bg-shade-gray h-full left-1/2 top-1/2 -translate-x-[50%] -translate-y-[50%] z-40;
+    content: "";
+  }
 }

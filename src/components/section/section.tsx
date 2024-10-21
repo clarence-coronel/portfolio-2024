@@ -14,7 +14,9 @@ const Section = ({ children, name, id }: SectionProps) => {
         <span className="text-foreground">{name}</span>
         {">"}
       </div>
-      <div>{children}</div>
+      <div className="my-10 px-16 max-lg:px-8 max-md:px-3 max-md:my-5">
+        {children}
+      </div>
       <div className="text-3xl text-secondary font-semibold w-full flex justify-end items-center">
         {"<"}
         <span className="text-foreground">{name}</span>
