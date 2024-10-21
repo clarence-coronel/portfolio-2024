@@ -32,7 +32,7 @@ const EducationCard = ({
       </div>
       <div className="flex flex-col gap-2">
         <div className="flex flex-col">
-          <span className="text-foreground font-bold text-lg">{school}</span>
+          <span className="text-secondary font-bold text-lg">{school}</span>
           <span className="text-xs text-foreground">
             {start} - {end}
           </span>

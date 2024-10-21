@@ -18,19 +18,23 @@ const iconLinks = [
 
 const links = [
   {
-    path: "/about",
+    path: "#about",
     title: "About",
   },
   {
-    path: "/skills",
+    path: "#experience",
+    title: "Experience",
+  },
+  {
+    path: "#skills",
     title: "Skills",
   },
   {
-    path: "/projects",
+    path: "#projects",
     title: "Projects",
   },
   {
-    path: "/contact",
+    path: "#contact",
     title: "Contact",
   },
 ];

@@ -11,6 +11,9 @@ import EducationCard from "@/components/education-card/education-card";
 import { about } from "@/data/about";
 import Timeline from "@/components/ui/timeline";
 import RichText from "@/components/ui/rich-text";
+import ExperienceCard from "@/components/experience-card/experience-card";
+
+import { experience } from "@/data/experience";
 
 export default function Home() {
   const scrolled = useScroll();
@@ -55,7 +58,7 @@ export default function Home() {
       <div
         className={`${
           scrolled && "opacity-100"
-        } duration-1000 opacity-0 z-40 relative max-sm:px-5 max-md:px-16 px-40`}
+        } duration-1000 opacity-0 z-40 relative max-sm:px-5 max-md:px-16 px-40 flex flex-col gap-40 max-md:gap-24`}
       >
         <Section name="About" id="about">
           <div className="flex flex-col gap-10 max-md:gap-5">
@@ -83,6 +86,22 @@ export default function Home() {
             </Timeline>
             <RichText data={about.hobby} />
           </div>
+        </Section>
+
+        <Section name="Experience" id="experience">
+          <Timeline>
+            {experience.map((e, index) => (
+              <ExperienceCard
+                key={index}
+                img={e.img}
+                company={e.company}
+                role={e.role}
+                start={e.start}
+                end={e.end}
+                tech={e.tech}
+              />
+            ))}
+          </Timeline>
         </Section>
       </div>
     </div>
