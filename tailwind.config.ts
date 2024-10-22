@@ -14,6 +14,7 @@ const config: Config = {
         foreground: "var(--foreground)",
         primary: "var(--primary)",
         secondary: "var(--secondary)",
+        border: "var(--border)",
         neutral: "#FAFAFA",
         shade: {
           gray: "#AAB0C3",

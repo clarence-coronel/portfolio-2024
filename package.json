@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@tippyjs/react": "^4.2.6",
     "next": "14.2.15",
     "popmotion": "^11.0.5",
     "react": "^18",
