@@ -66,6 +66,8 @@ const Navigation = () => {
       const initialPosTemp = getNavLinkRects();
 
       navRef.current?.classList.add("flex-col");
+      navRef.current?.classList.add("absolute");
+      navRef.current?.classList.add("right-0");
 
       const finalPosTemp = getNavLinkRects();
 
@@ -99,6 +101,8 @@ const Navigation = () => {
       const initialPosTemp = getNavLinkRects();
 
       navRef.current?.classList.remove("flex-col");
+      navRef.current?.classList.remove("absolute");
+      navRef.current?.classList.remove("right-0");
 
       const finalPosTemp = getNavLinkRects();
 
@@ -136,7 +140,7 @@ const Navigation = () => {
       } px-20 max-xl:px-8 z-50 max-lg:py-5 max-md:py-3 py-10 fixed w-screen flex flex-col justify-between items-center`}
     >
       <div className="max-w-[1900px] w-full flex flex-col justify-between h-full max-md:items-center">
-        <div className=" w-full flex justify-between items-start max-md:items-center">
+        <div className="relative w-full flex justify-between items-start max-md:items-center">
           <Link href="/" className="hover:rotate-180 duration-500 ">
             <LogoIcon
               className="max-md:hidden"
@@ -152,7 +156,7 @@ const Navigation = () => {
 
           <nav
             ref={navRef}
-            className={`max-md:hidden max-lg:gap-8 max-xl:gap-10 flex max-md:gap-5 gap-14 my-auto relative`}
+            className={`max-md:hidden max-lg:gap-8 max-xl:gap-10 flex max-md:gap-5 gap-14 my-auto`}
           >
             {links.map((link, index) => (
               <NavLink

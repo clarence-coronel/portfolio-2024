@@ -14,6 +14,8 @@ import RichText from "@/components/ui/rich-text";
 import ExperienceCard from "@/components/experience-card/experience-card";
 
 import { experience } from "@/data/experience";
+import Image from "next/image";
+import Skills from "@/components/skills/skills";
 
 export default function Home() {
   const scrolled = useScroll();
@@ -102,6 +104,9 @@ export default function Home() {
               />
             ))}
           </Timeline>
+        </Section>
+        <Section name="Skills" id="skills">
+          <Skills />
         </Section>
       </div>
     </div>
