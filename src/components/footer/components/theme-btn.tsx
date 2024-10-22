@@ -1,47 +1,13 @@
+// components/ThemeBtn.tsx
 "use client";
-import React, { useEffect, useLayoutEffect, useState } from "react";
+import React from "react";
 import LightModeIcon from "@/components/icons/light-mode-icon";
 import DarkModeIcon from "@/components/icons/dark-mode-icon";
 import IconLink from "@/components/navigation/components/icon-link";
+import { useTheme } from "@/context/ThemeContext";
 
 const ThemeBtn = () => {
-  const [theme, setTheme] = useState<"light" | "dark">("light");
-
-  useLayoutEffect(() => {
-    const localTheme = localStorage.getItem("theme") as "light" | "dark" | null;
-    const initialTheme = localTheme || "light";
-    setTheme(initialTheme);
-
-    // Apply theme here to make sure it gets called in client side. But causes a 1sec delay
-    // when loading theme
-    applyTheme(initialTheme);
-  }, []);
-
-  const toggleTheme = () => {
-    const selectedTheme = theme === "light" ? "dark" : "light";
-    localStorage.setItem("theme", selectedTheme);
-    // localStorage.removeItem("theme");
-    setTheme(selectedTheme);
-  };
-
-  const applyTheme = (theme: "light" | "dark") => {
-    if (theme === "light") {
-      document.body.classList.remove("dark");
-    } else {
-      document.body.classList.add("dark");
-    }
-  };
-
-  useEffect(() => {
-    applyTheme(theme);
-  }, [theme]);
-
-  // Apply theme before loading component
-  // applyTheme(
-  //   localStorage.getItem("theme")
-  //     ? (localStorage.getItem("theme") as "dark" | "light")
-  //     : "light"
-  // );
+  const { theme, toggleTheme } = useTheme();
 
   return (
     <button className="relative mt-auto" onClick={toggleTheme}>
