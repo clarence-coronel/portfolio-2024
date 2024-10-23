@@ -9,13 +9,17 @@ import GitIcon from "@/components/icons/git-icon";
 import FileIcon from "@/components/icons/file-icon";
 import LinkedinIcon from "@/components/icons/linkedin-icon";
 import useWindowSize from "@/hooks/useWindowSize";
+import { githubProfile, linkedinProfile } from "@/data/socials";
 
 const iconLinks = [
-  { title: "Github", Icon: GitIcon },
-  { title: "Resume", Icon: FileIcon },
-  { title: "Linkedin", Icon: LinkedinIcon },
+  { title: "Github", Icon: GitIcon, url: githubProfile },
+  { title: "Resume", Icon: FileIcon, url: "/Resume v6_remove_contacts .pdf" },
+  {
+    title: "Linkedin",
+    Icon: LinkedinIcon,
+    url: linkedinProfile,
+  },
 ];
-
 const links = [
   {
     path: "#about",
@@ -97,12 +101,13 @@ const MobileNav = () => {
 
           <div className="mt-auto w-full flex justify-between pb-10">
             {iconLinks.map((iconLink, index) => (
-              <iconLink.Icon
-                key={index}
-                className="text-foreground cursor-pointer"
-                innerColor="var(--background)"
-                outerColor="var(--foreground)"
-              />
+              <a key={index} href={iconLink.url} target="_blank">
+                <iconLink.Icon
+                  className="text-foreground cursor-pointer"
+                  innerColor="var(--background)"
+                  outerColor="var(--foreground)"
+                />
+              </a>
             ))}
 
             <ThemeBtn />
