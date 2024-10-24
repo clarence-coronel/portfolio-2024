@@ -7,6 +7,7 @@
 @layer base {
   :root {
     --background: #fff;
+    --background-transparent: #ffffffc8;
     --foreground: #171717;
     --primary: #eef0f7;
     --secondary: #fc2d1f;
@@ -15,6 +16,7 @@
 
   .dark {
     --background: #1e1e1e;
+    --background-transparent: #1e1e1ee1;
     --foreground: #fafafa;
     --primary: #171717;
     --secondary: #fc2d1f;

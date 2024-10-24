@@ -41,7 +41,7 @@ const ExperienceCard = ({
         <div className="flex flex-wrap gap-x-2 gap-y-4">
           {tech?.map((t, index) => (
             <div key={index} className="text-xs text-foreground ">
-              <span className="font-semibold bg-background px-2 py-1 rounded-lg shadow-sm">
+              <span className="font-semibold bg-background px-2 py-1 rounded-full shadow-sm">
                 {t}
               </span>
             </div>

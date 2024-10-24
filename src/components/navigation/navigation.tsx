@@ -137,7 +137,7 @@ const Navigation = () => {
     <header
       className={`${
         scrolled && "max-md:bg-primary duration-1000"
-      } px-20 max-xl:px-8 z-50 max-lg:py-5 max-lg:pb-2 max-md:py-3 py-10 pb-0 fixed w-screen flex flex-col justify-between items-center`}
+      } px-16 max-xl:px-8 z-50 max-lg:py-5 max-lg:pb-2 max-md:py-3 py-10 pb-0 fixed w-screen flex flex-col justify-between items-center`}
     >
       <div className="max-w-[1900px] w-full flex flex-col justify-between h-full max-md:items-center">
         <div className="relative w-full flex justify-between items-start max-md:items-center">

@@ -4,7 +4,7 @@ import IconLink from "../navigation/components/icon-link";
 import ThemeBtn from "./components/theme-btn";
 import { animate } from "popmotion";
 
-import GitIcon from "../icons/git-icon";
+import GithubIcon from "../icons/github-icon";
 import FileIcon from "../icons/file-icon";
 import LinkedinIcon from "../icons/linkedin-icon";
 
@@ -12,7 +12,7 @@ import useScroll from "@/hooks/useScroll";
 import { githubProfile, linkedinProfile } from "@/data/socials";
 
 const iconLinks = [
-  { title: "Github", Icon: GitIcon, url: githubProfile },
+  { title: "Github", Icon: GithubIcon, url: githubProfile },
   { title: "Resume", Icon: FileIcon, url: "/Resume v6_remove_contacts .pdf" },
   {
     title: "Linkedin",

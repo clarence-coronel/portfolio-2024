@@ -1,7 +1,7 @@
 import React from "react";
 import { IconProps } from "@/interfaces/interfaces";
 
-const GitIcon = ({
+const GithubIcon = ({
   size = 40,
   innerColor,
   outerColor,
@@ -30,4 +30,4 @@ const GitIcon = ({
   );
 };
 
-export default GitIcon;
+export default GithubIcon;
