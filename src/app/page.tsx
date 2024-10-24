@@ -16,10 +16,6 @@ import ExperienceCard from "@/components/experience-card/experience-card";
 import { experience } from "@/data/experience";
 import Skills from "@/components/skills/skills";
 
-import ProjectCard from "@/components/projects/components/project-card";
-import Link from "next/link";
-
-import { projects } from "@/data/projects";
 import Projects from "@/components/projects/projects";
 
 export default function Home() {
