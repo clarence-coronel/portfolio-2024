@@ -122,6 +122,7 @@ export default function Home() {
                 tech={p.tech}
                 url={p.url}
                 img={p.img}
+                date={p.date}
               />
             ))}
 

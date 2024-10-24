@@ -5,6 +5,7 @@ export const projects = [
     tech: ["Next.js", "Tailwind CSS", "Node.js", "PostgreSQL"],
     url: "https://animanga-archive.vercel.app/?mode=anime&q=&page=1",
     img: "/projects/animanga-img.png",
+    date: "January 23, 2023",
   },
   {
     name: "Calculator",
@@ -12,6 +13,7 @@ export const projects = [
     tech: ["Vue.js", "Sass", "Firebase"],
     url: "https://animanga-archive.vercel.app/?mode=anime&q=&page=1",
     img: "/projects/calculator-img.png",
+    date: "January 23, 2023",
   },
   {
     name: "Grandline Memory Game",
@@ -19,6 +21,7 @@ export const projects = [
     tech: ["React.js", "Bootstrap", "Node.js", "MongoDB"],
     url: "https://animanga-archive.vercel.app/?mode=anime&q=&page=1",
     img: "/projects/grandline-img.png",
+    date: "January 23, 2023",
   },
   {
     name: "iSchedule",
@@ -26,6 +29,7 @@ export const projects = [
     tech: ["Angular", "Tailwind CSS", "Spring Boot", "MySQL"],
     url: "https://animanga-archive.vercel.app/?mode=anime&q=&page=1",
     img: "/projects/ischedule-img.png",
+    date: "January 23, 2023",
   },
   {
     name: "iSchedule Admin",
@@ -33,6 +37,7 @@ export const projects = [
     tech: ["Vue.js", "Vuetify", "Django", "PostgreSQL"],
     url: "https://animanga-archive.vercel.app/?mode=anime&q=&page=1",
     img: "/projects/ischeduleadmin-img.png",
+    date: "January 23, 2023",
   },
   {
     name: "Nintendo",
@@ -40,6 +45,7 @@ export const projects = [
     tech: ["Gatsby.js", "Styled Components", "GraphQL", "Contentful"],
     url: "https://animanga-archive.vercel.app/?mode=anime&q=&page=1",
     img: "/projects/nintendo-img.png",
+    date: "January 23, 2023",
   },
   {
     name: "Pokedex",
@@ -47,6 +53,7 @@ export const projects = [
     tech: ["React.js", "Chakra UI", "Node.js", "MongoDB"],
     url: "https://animanga-archive.vercel.app/?mode=anime&q=&page=1",
     img: "/projects/pokedex-img.png",
+    date: "January 23, 2023",
   },
   {
     name: "Resume Maker",
@@ -54,6 +61,7 @@ export const projects = [
     tech: ["Next.js", "Tailwind CSS", "Firebase", "Algolia"],
     url: "https://animanga-archive.vercel.app/?mode=anime&q=&page=1",
     img: "/projects/resume-maker-img.png",
+    date: "January 23, 2023",
   },
   {
     name: "Etch-A-Sketch",
@@ -61,6 +69,7 @@ export const projects = [
     tech: ["Svelte", "Bulma", "Node.js"],
     url: "https://animanga-archive.vercel.app/?mode=anime&q=&page=1",
     img: "/projects/sketch-img.png",
+    date: "January 23, 2023",
   },
   {
     name: "Tic-Tac-Fighter",
@@ -68,5 +77,6 @@ export const projects = [
     tech: ["React.js", "Material UI", "Express.js", "MongoDB"],
     url: "https://animanga-archive.vercel.app/?mode=anime&q=&page=1",
     img: "/projects/tictacfighter-img.png",
+    date: "January 23, 2023",
   },
 ];
