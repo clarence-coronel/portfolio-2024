@@ -61,7 +61,7 @@ const ProjectCard = ({
             </a>
             <div className="text-xs">{date}</div>
           </div>
-          <p className="max-w-[500px]">
+          <p className="max-w-[500px] text-balance">
             {seeMore ? desc : truncate(desc)}
             {desc.length > MAX_CHAR_LIMIT && (
               <button
