@@ -32,7 +32,7 @@ const ProjectCard = ({
   return (
     <div className="w-full flex gap-7 max-lg:flex-col">
       <div className="max-w-[350px] max-xl:max-w-[300px] w-full h-fit group bg-background rounded-xl overflow-hidden relative justify-center items-center flex">
-        <div className="bg-background w-full h-full group-hover:scale-125 relative aspect-video duration-500 flex justify-center items-center">
+        <div className="bg-background w-full h-full group-hover:scale-110 relative aspect-video duration-500 flex justify-center items-center">
           <Image className="object-cover object-center" src={img} fill alt="" />
         </div>
       </div>
